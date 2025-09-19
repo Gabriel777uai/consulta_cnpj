@@ -1,13 +1,15 @@
-# [Nome do Seu Repositório]
+# [Consulta CNPJ public]
 
 [![Status do Build](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow.svg)](https://github.com/[seu_usuario]/[seu_repositorio])
 [![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-blue.svg)](LICENSE)
 
 ## 💻 Sobre o Projeto
 
-Uma descrição curta e clara sobre o que o seu projeto faz. Pense em qual problema ele resolve ou qual é o seu objetivo.
+Este projeto foi feito com a ideia de criar uma solução rapida para empresas para consultas de cnpj para que não viste tantos anuncios.
 
-* **Exemplo:** Este projeto é uma API RESTful para gerenciamento de usuários. Ele permite criar, ler, atualizar e deletar informações de usuários em um banco de dados.
+* **Exemplo:** Utilizando uma api publica do site CNPJã nós criamos essa interface para ajudar em pesquisas, as regras dela são basicas a cada 1 min ela atualiza e você pode fazer apenas 5 consultas dentro de 1 min, depois de 1 min você pode fazer mais 5, para controle de requisições.
+
+Fiqui a vontade para alterar e utilizar o projeto!
 
 
 ## 🛠️ Instalação e Execução
