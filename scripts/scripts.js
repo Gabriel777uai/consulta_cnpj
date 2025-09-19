@@ -1,8 +1,4 @@
-
-
-document.getElementById('puxarBtn').addEventListener('click' , () => {
-    let cnpjInput = document.getElementById('dadosInput');
-
+function getCnpj(param) {
     console.log('test')
     function formartCnpj(cnpj) {
         let newFormat = cnpj.replace(/[.,-\/]/g,'');
@@ -106,5 +102,17 @@ document.getElementById('puxarBtn').addEventListener('click' , () => {
         return Dados(newFormat);
         }
     }
-    formartCnpj(cnpjInput.value)
+    formartCnpj(param)
+}
+
+let cnpjInput = document.getElementById('dadosInput');
+
+document.getElementById('puxarBtn').addEventListener('click' , function () {
+    getCnpj(cnpjInput.value);
 }) 
+cnpjInput.addEventListener('keyup', function(event) {
+    event.preventDefault();
+    if (event.key == 'Enter') {
+        getCnpj(cnpjInput.value);
+    }
+})
