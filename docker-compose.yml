@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  # Serviço da sua aplicação PHP com Apache
+  # Serviço do banco de dados PostgreSQL
+  db:
+    image: postgres:15-alpine # Usa a imagem oficial do PostgreSQL
+    container_name: db_pgsql
+    restart: always
+    environment:
+      POSTGRES_DB: seu_banco_de_dados
+      POSTGRES_USER: seu_usuario
+      POSTGRES_PASSWORD: sua_senha
+    volumes:
+      - db_data:/var/lib/postgresql/data # Volume persistente para os dados do banco
+
+  # Serviço para gerenciar o banco de dados via interface web
+  adminer:
+    image: adminer # Usa a imagem oficial do Adminer
+    container_name: adminer_gui
+    ports:
+      - "8081:8080"
+    depends_on:
+      - db
+
+volumes:
+  db_data:
