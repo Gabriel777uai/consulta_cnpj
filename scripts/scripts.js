@@ -1,3 +1,5 @@
+import BearerToken from "./app.js";
+
 function getCnpj(param) {
     console.log('test')
     function formartCnpj(cnpj) {
@@ -22,7 +24,7 @@ function getCnpj(param) {
                 method: "GET",
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': "Bearer fa99f225-1e7e-4f05-8102-9c588caada6e-70124641-2237-4fda-84da-e074b25fe28d"
+                    "Authorization" : BearerToken 
                 }
             })
                 
